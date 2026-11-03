@@ -1,0 +1,330 @@
+{
+  "max_line_length": 80,
+  "chapter_files": "content/(?:[0-9]{2}-[a-z0-9-]+|frontmatter/(?:preface|notation))\\.typ",
+  "cited_helpers": [
+    "bib-item"
+  ],
+  "literal_references": {
+    "content/00-01-background.typ": {
+      "@bib:Reiner1975[MO (1.10)]": "Theorem 1.10 of the external book Maximal Orders, not a target in this volume.",
+      "@bib:Reiner1975[MO (1.14)]": "Theorem 1.14 of the external book Maximal Orders, not a target in this volume.",
+      "@bib:CurtisReiner1962[CR (6.12)]": "Theorem 6.12 of the external Curtis–Reiner book, not a target in this volume.",
+      "@bib:CurtisReiner1962[CR §~10]": "Section 10 of the external Curtis–Reiner book, not a section of this volume.",
+      "@bib:CurtisReiner1962[CR §§~1–7]": "Sections 1–7 of the external Curtis–Reiner book.",
+      "@bib:CurtisReiner1962[CR §~6]": "Section 6 of the external Curtis–Reiner book; both mentions keep the native bibliography link.",
+      "Chapter~7 of Volume~II": "Chapter 7 is in the second volume, outside the present document; no local chapter target exists."
+    },
+    "content/frontmatter/preface.typ": {
+      "type in Chapter 7.": "The Preface identifies this as a chapter of Volume II, outside this document.",
+      "our discussion of Picard groups in Chapter 11.": "The Preface identifies this as a chapter of Volume II, outside this document.",
+      "Burnside rings and representation rings (Chapter 5).": "The Preface identifies this as a chapter of Volume II, outside this document.",
+      "Rationality properties of group representations (Chapter 6).": "The Preface identifies this as a chapter of Volume II, outside this document.",
+      "Representations of finite groups of Lie type (Chapter 7).": "The Preface identifies this as a chapter of Volume II, outside this document.",
+      "Indecomposable modules (Chapter 8).": "The Preface identifies this as a chapter of Volume II, outside this document.",
+      "Blocks (Chapter 9).": "The Preface identifies this as a chapter of Volume II, outside this document.",
+      "Algebraic $K$-theory (Chapter 10).": "The Preface identifies this as a chapter of Volume II, outside this document.",
+      "Class groups (Chapter 11).": "The Preface identifies this as a chapter of Volume II, outside this document."
+    },
+    "content/00-02-hom-tensor.typ": {
+      "@bib:CurtisReiner1962[CR §~12]": "A precise locator in the external cited book; the native bibliography link identifies that book, not a local object.",
+      "@bib:CurtisReiner1962[CR §~57]": "A precise locator in the external cited book; the native bibliography link identifies that book, not a local object.",
+      "@bib:CurtisReiner1962[CR §~16]": "A precise locator in the external cited book; the native bibliography link identifies that book, not a local object.",
+      "@bib:Reiner1975[MO §~2e]": "A precise locator in the external cited book; the native bibliography link identifies that book, not a local object.",
+      "@bib:CurtisReiner1962[CR (29.5)]": "A precise locator in the external cited book; the native bibliography link identifies that book, not a local object."
+    },
+    "content/00-03-semisimple.typ": {
+      "@bib:CurtisReiner1962[CR §~11]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR (54.1)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR (11.15)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §~12]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §~26]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR (27.24)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO §~16]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §~66]": "A precise locator in the external cited work, with its native bibliography link.",
+      "Jacobson~@bib:Jacobson1989, Propositions~4.9–4.10": "Propositions 4.9–4.10 of the cited external Basic Algebra II, not local object numbers.",
+      "@bib:Anderson1973, §~21": "A precise locator in the external cited work, with its native bibliography link."
+    },
+    "content/00-04-dedekind.typ": {
+      "@bib:Reiner1975[MO §~3b]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO §~3c]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO §~3d]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO (3.24)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §~17]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR (21.13)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §~18]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §~19]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR (20.18)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO (4.30)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO §~1]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO §~4d]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO (4.37)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO Ex.~4.9]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO (4.35)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Weiss1963[Weiss (1963), §~1.8]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Weiss1963[Weiss (1963), §~1.9]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Weiss1963[Weiss (1963), §~1.7]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §~22]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR (18.24)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO (4.17)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO (6.16)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO §~4b and §~5a]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR (20.6)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §~21]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Weiss1963[Weiss (1963), Th.~4.9-1]": "A precise locator in the external cited work, with its native bibliography link.",
+      "(45.2) of Volume~II": "The numbered assertion is in the second volume, outside this document."
+    },
+    "content/00-05-radicals.typ": {
+      "@bib:CurtisReiner1962[CR (24.2)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO (6.8)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO (6.7)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR (54.1)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO (6.16)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "Ayoub–Ayoub~@bib:Ayoub1969, Theorem~5 and its corollary": "Theorem 5 and its corollary are in the cited Ayoub–Ayoub article, not this volume.",
+      "Reiner~@bib:Reiner2003, Theorem~6.16": "Theorem 6.16 in the cited 2003 edition of Maximal Orders.",
+      "Reiner~@bib:Reiner2003, Exercise~5.1": "Exercise 5.1 in the cited 2003 edition of Maximal Orders."
+    },
+    "content/00-06-idempotents.typ": {
+      "@bib:Reiner1975[MO §~6]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Anderson1973[Anderson–Fuller (1973), Th.~27.6, p.~304]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Anderson1973[§~27]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Anderson1973[§~28]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR (57.13)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §~58, remarks following (58.5)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR Exercise~58.5]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR (58.12)]": "A precise locator in the external cited work, with its native bibliography link."
+    },
+    "content/00-07-separable.typ": {
+      "@bib:CurtisReiner1962[CR §~12]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Lang1965, VII, §4": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR (68.9)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §~27]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Bourbaki1958, §10, No.~4": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO §7b]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO §9]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[Exercise~9.3]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO (9.14)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO (9.26)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO (32.2)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO, Exercise~14.6]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO (33.15)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "Reiner~@bib:Reiner2003, (30.1)": "Construction (30.1) in the cited 2003 edition of Maximal Orders.",
+      "Chapter~10 of Volume~II": "A chapter in the second volume, outside this document."
+    },
+    "content/00-08-ext-tor-cohomology.typ": {
+      "@bib:Reiner1975[MO §~2e]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Reiner1975[MO §~3c]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Rotman1979, Theorem~5.11": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR (6.7)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR (2.8)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Rotman1979, Theorem~10.24": "A precise locator in the cited external work; the bibliography number is computed by the native reference."
+    },
+    "content/01-00-introduction.typ": {
+      "@bib:CurtisReiner1962[Chapters~5–7 of CR]": "A precise locator in the external cited work, with its native bibliography link."
+    },
+    "content/01-09-orthogonality.typ": {
+      "@bib:CurtisReiner1962[CR §~31]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR (58.12)]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Feit1967, §7": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §§32,46]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §~20B]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §~37]": "A precise locator in the external cited work, with its native bibliography link."
+    },
+    "content/01-10-induced.typ": {
+      "@bib:CurtisReiner1962[CR §~48]": "A precise locator in the external cited work, with its native bibliography link.",
+      "Chapter~5 of Volume~II": "Burnside rings and representation rings are assigned to Volume II, Chapter 5, by this volume’s preface."
+    },
+    "content/01-11-clifford-hecke.typ": {
+      "@bib:CurtisReiner1962[CR §~51]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §~53]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Rotman1979, Theorem 10.24": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Huppert1967, Kap. V, §23–25": "Sections 23–25 of Chapter V in the external cited book.",
+      "@bib:Isaacs1976, Chapter 11": "Chapter 11 in the external cited book, not a chapter of this volume.",
+      "Chapter~7 of Volume~II": "The preface assigns representations of finite groups of Lie type to Volume II, Chapter 7.",
+      "@bib:CurtisReiner1962[CR §~47]": "Section 47 of the external cited book.",
+      "@bib:Huppert1967, Chapter V, §18": "A precise locator in the cited external work; the bibliography number is computed by the native reference."
+    },
+    "content/01-12-tensor-algebras.typ": {
+      "@bib:CurtisReiner1962[CR §~67]": "A precise locator in the external cited work, with its native bibliography link.",
+      "Chapter~6 of Volume~II": "The preface assigns rationality properties to Chapter 6 of the second volume.",
+      "@bib:Swan1968, Ch.~8, Prop.~8.1": "Chapter 8, Proposition 8.1 of the external cited Swan book."
+    },
+    "content/01-13-tensor-induction.typ": {
+      "@bib:Gorenstein1968, Chapter~7": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Zassenhaus1949, Chapter~V, §4": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Hall1959, §14.3": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §1]": "A precise locator in the external cited work, with its native bibliography link."
+    },
+    "content/01-14-exceptional-characters.typ": {
+      "@bib:Gorenstein1968, Chapter~12": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:Dornhoff1971, I, §28": "A precise locator in the external cited work, with its native bibliography link.",
+      "Chapter~9 of Volume~II": "An explicit locator in an external work or the second volume, retained with its native bibliography link where applicable.",
+      "Chapter~7 of Volume~II": "An explicit locator in an external work or the second volume, retained with its native bibliography link where applicable.",
+      "@bib:Gorenstein1980, Chapter~16, §3": "An explicit locator in an external work or the second volume, retained with its native bibliography link where applicable."
+    },
+    "content/01-15-artin-brauer.typ": {
+      "@bib:CurtisReiner1962[CR §39]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §40]": "A precise locator in the external cited work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §42]": "A precise locator in the external cited work, with its native bibliography link.",
+      "Chapter~6 of Volume~II": "An explicit locator in an external work or the second volume, retained with its native bibliography link where applicable.",
+      "@bib:Niven1980, §4.3": "An explicit locator in an external work or the second volume, retained with its native bibliography link where applicable.",
+      "@bib:Isaacs1976, Chapter~8": "An explicit locator in an external work or the second volume, retained with its native bibliography link where applicable.",
+      "@bib:Banaschewski1963, §1": "An explicit locator in an external work or the second volume, retained with its native bibliography link where applicable.",
+      "@bib:Isaacs1976, Lemma~8.11": "An explicit locator in an external work or the second volume, retained with its native bibliography link where applicable.",
+      "@bib:Huppert1967, Chapter~5, (19.12)": "A precise locator in the cited external work; the bibliography number is computed by the native reference."
+    },
+    "content/02-00-introduction.typ": {
+      "Chapter~9 of Volume~II": "An explicit locator in the cited external work or the second volume."
+    },
+    "content/02-16-decomposition.typ": {
+      "Chapter~10 of Volume~II": "An explicit locator in the cited external work or the second volume.",
+      "@bib:CurtisReiner1962[CR §82]": "An explicit locator in the cited external work or the second volume.",
+      "@bib:Reiner1975[MO §12]": "An explicit locator in the cited external work or the second volume."
+    },
+    "content/02-17-brauer-characters.typ": {
+      "@bib:CurtisReiner1962[CR (30.12)]": "A precise locator in the external Curtis–Reiner work, with its native bibliography link.",
+      "@bib:CurtisReiner1962[CR §83B]": "A precise locator in the external Curtis–Reiner work, with its native bibliography link."
+    },
+    "content/02-18-cartan-brauer.typ": {
+      "Chapters~10": "An explicit locator in the external work or the second volume.",
+      "Chapter~7 of Volume~II": "An explicit locator in the external work or the second volume.",
+      "@bib:CurtisReiner1962[CR (83.9)]": "An explicit locator in the external work or the second volume.",
+      "@bib:CurtisReiner1962[CR §§82–84]": "An explicit locator in the external work or the second volume.",
+      "@bib:CurtisReiner1962[CR (16.8)]": "An explicit locator in the external work or the second volume.",
+      "@bib:CurtisReiner1962[CR §16]": "An explicit locator in the external work or the second volume.",
+      "@bib:CurtisReiner1962[CR §86]": "An explicit locator in the external work or the second volume.",
+      "@bib:Brauer1941, §26": "An explicit locator in the external work or the second volume."
+    },
+    "content/02-19-vertices-sources.typ": {
+      "@bib:CurtisReiner1962[CR §64]": "A precise locator in the cited external work or the second volume.",
+      "@bib:CurtisReiner1962[CR Chapter~12]": "A precise locator in the cited external work or the second volume.",
+      "Chapter~9 of Volume~II": "A precise locator in the cited external work or the second volume.",
+      "@bib:CurtisReiner1962[CR §§62 and~63]": "A precise locator in the cited external work or the second volume."
+    },
+    "content/02-20-green-correspondence.typ": {
+      "@bib:CurtisReiner1962[CR (64.6)]": "A precise locator in the cited external work or the second volume.",
+      "Chapter~9 of Volume~II": "A precise locator in the cited external work or the second volume.",
+      "Chapter~6 of Volume~II": "A precise locator in the cited external work or the second volume."
+    },
+    "content/02-21-induction-fields.typ": {
+      "@bib:CurtisReiner1962[CR §42]": "A precise locator in the cited external work.",
+      "@bib:CurtisReiner1962[CR (21.13)]": "A precise locator in the cited external work.",
+      "@bib:CurtisReiner1962[CR §83A]": "A precise locator in the cited external work.",
+      "Chapters~12 and~17": "A precise locator in the cited external work.",
+      "@bib:Serre1977, §12.6": "A precise locator in the cited external work."
+    },
+    "content/02-22-p-solvable.typ": {
+      "@bib:Swan1963, Theorem 6": "A precise locator in the cited external work.",
+      "@bib:Serre1977, §17.4": "A precise locator in the cited external work.",
+      "@bib:Dornhoff1972, Part B, §72": "A precise locator in the cited external work.",
+      "@bib:Fong1962, Theorem 2D": "A precise locator in the cited external work."
+    },
+    "content/03-23-lattices-orders.typ": {
+      "@bib:Reiner1975[MO, (8.7)]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO (18.7)]": "A precise locator in the cited external work.",
+      "@bib:CurtisReiner1962[CR (20.14)]": "A precise locator in the cited external work.",
+      "@bib:CurtisReiner1962[CR (73.28)]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO (18.10)]": "A precise locator in the cited external work.",
+      "@bib:CurtisReiner1962[CR (73.13)]": "A precise locator in the cited external work."
+    },
+    "content/03-24-jordan-zassenhaus.typ": {
+      "@bib:Reiner1975[MO §26]": "A precise locator in the cited external work.",
+      "@bib:CurtisReiner1962[CR §79]": "A precise locator in the cited external work."
+    },
+    "content/03-25-extensions-lattices.typ": {
+      "@bib:CurtisReiner1962[CR (73.14)]": "A precise locator in the cited external work."
+    },
+    "content/03-26-maximal-hereditary.typ": {
+      "@bib:Reiner1975[MO, Theorem 21.4]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO, Theorem 22.10]": "A precise locator in the cited external work.",
+      "@bib:Rotman1979, Cor. 9.23": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO (10.5)]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO (10.8), (10.9) and (40.7)]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO (11.2)]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO (11.5)]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO (3.24), (2.22) and (2.39)]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO (12.8), (13.2), (13.3) and (14.3)]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO (17.3), (17.4)]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO (18.3), (18.7), and (18.10)]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO (21.6), (21.7)]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO Exercise 22.11]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO (39.14), (39.23) and (39.24)]": "A precise locator in the cited external work."
+    },
+    "content/03-27-group-rings-orders.typ": {
+      "@bib:Reiner1975[MO (39.23) and (40.8)]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO (25.7)]": "A precise locator in the cited external work.",
+      "Chapter~6 of Volume~II": "A precise locator in the cited external work."
+    },
+    "content/03-28-twisted-group-rings.typ": {
+      "@bib:Reiner1975[MO\n    (4.37)]": "A precise locator in the cited external work.",
+      "@bib:CurtisReiner1962[CR\n    §20]": "A precise locator in the cited external work.",
+      "@bib:CurtisReiner1962[CR\n  (18.20)]": "A precise locator in the cited external work.",
+      "@bib:CurtisReiner1962[CR (18.24)]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO (40.8)]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO §40]": "A precise locator in the cited external work.",
+      "@bib:Weiss1963, Ch. 4, §10": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO §39]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO\n  (29.6)]": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO, Exercise 7.9]": "A precise locator in the cited external work."
+    },
+    "content/03-29-annihilator-ext.typ": {
+      "@bib:CurtisReiner1962[CR] (75.11)": "A precise locator in the cited external work.",
+      "@bib:CurtisReiner1962[CR] §71": "A precise locator in the cited external work.",
+      "@bib:CurtisReiner1962[CR] (71.6)": "A precise locator in the cited external work.",
+      "@bib:CurtisReiner1962[CR] (75.14)": "A precise locator in the cited external work.",
+      "@bib:CurtisReiner1962[CR], §75, p. 528": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO] (9.26)": "A precise locator in the cited external work."
+    },
+    "content/04-00-introduction.typ": {
+      "Chapter~11 of Volume~II": "A precise locator in the cited external work or the second volume."
+    },
+    "content/04-30-local-theory.typ": {
+      "@bib:CurtisReiner1962[CR (77.1)]": "A precise locator in the cited external work or the second volume.",
+      "@bib:CurtisReiner1962[CR (21.13)]": "A precise locator in the cited external work or the second volume.",
+      "@bib:CurtisReiner1962[CR (76.11)]": "A precise locator in the cited external work or the second volume.",
+      "@bib:Reiner1975[MO (5.8)]": "A precise locator in the cited external work or the second volume.",
+      "@bib:CurtisReiner1962[CR (68.9)]": "A precise locator in the cited external work or the second volume.",
+      "@bib:Nakayama1957 (remarks at end of §3)": "A precise locator in the cited external work or the second volume.",
+      "@bib:Serre1962, Ch.\nIII, §5": "A precise locator in the cited external work or the second volume.",
+      "Chapter~8 of Volume~II": "A precise locator in the cited external work or the second volume."
+    },
+    "content/04-31-genus.typ": {
+      "@bib:CurtisReiner1962[CR] §22, p.~150": "A precise locator in the cited external work or the second volume.",
+      "@bib:CurtisReiner1962[CR] §20": "A precise locator in the cited external work or the second volume.",
+      "@bib:CurtisReiner1962[CR] (18.20)": "A precise locator in the cited external work or the second volume.",
+      "@bib:Weiss1963, Chapter~5": "A precise locator in the cited external work or the second volume.",
+      "Chapter~10\nof Volume~II": "A precise locator in the cited external work or the second volume.",
+      "Chapter~11 of\nVolume~II": "A precise locator in the cited external work or the second volume."
+    },
+    "content/04-32-projective-lattices.typ": {
+      "@bib:CurtisReiner1962[CR] (77.14)": "A precise locator in the cited external work.",
+      "@bib:Berman1963, Theorem~5": "A precise locator in the cited external work."
+    },
+    "content/04-33-finite-representation-type.typ": {
+      "@bib:Drozd1967c (§2)": "A precise locator in the cited external work.",
+      "@bib:Weiss1963 (§3-2)": "A precise locator in the cited external work."
+    },
+    "content/04-34-examples-integral-representations.typ": {
+      "@bib:Reiner1975[MO] (38.1)": "A precise locator in the cited external work or the second volume.",
+      "@bib:CurtisReiner1962[CR] (21.9)": "A precise locator in the cited external work or the second volume.",
+      "@bib:CurtisReiner1962[CR] (74.3)": "A precise locator in the cited external work or the second volume.",
+      "@bib:Reiner1975[MO], proof of Theorem 14.1": "A precise locator in the cited external work or the second volume.",
+      "Chapter~11 of Volume~II": "A precise locator in the cited external work or the second volume."
+    },
+    "content/04-35-invertible-ideals.typ": {
+      "@bib:Reiner1975[MO] (39.1)": "A precise locator in the cited external work or the second volume.",
+      "@bib:Reiner1975[MO], Exercise~39.6": "A precise locator in the cited external work or the second volume.",
+      "Chapter~11 of Volume~II": "A precise locator in the cited external work or the second volume."
+    },
+    "content/04-36-krull-schmidt.typ": {
+      "@bib:Niven1980, §2.9": "A precise locator in the cited external work or the second volume.",
+      "@bib:Reiner1975[MO] §30": "A precise locator in the cited external work or the second volume.",
+      "Chapter~6 of Volume~II": "A precise locator in the cited external work or the second volume."
+    },
+    "content/04-37-bass-gorenstein.typ": {
+      "@bib:Bass1963, §7": "A precise locator in the cited external work.",
+      "@bib:Bass1963, Lemma~7.4": "A precise locator in the cited external work.",
+      "@bib:Reiner1975[MO] (39.1)": "A precise locator in the cited external work."
+    }
+  },
+  "local_markup": {}
+}

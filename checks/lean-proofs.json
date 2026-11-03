@@ -1,0 +1,22 @@
+[
+  {
+    "file": "checks/lean/CurtisReinerI/SchurAdjunction.lean",
+    "declarations": [
+      "CurtisReinerI.schur_bijective",
+      "CurtisReinerI.schur_inverse",
+      "CurtisReinerI.tau_evaluation",
+      "CurtisReinerI.curry_tau",
+      "CurtisReinerI.tau_curry"
+    ],
+    "book": "Lemma 3.17: a nonzero map between simple left modules is bijective, and a nonzero endomorphism has a two-sided linear inverse. Theorem 2.19: in the commutative specialization A=B=K, tau(f)(m tensor l)=f(l)(m), and currying and tau are inverse maps.",
+    "limitations": "Schur uses arbitrary rings and simple left modules, with the book’s ordinary composition. The adjunction uses a commutative ring K and K-modules L,M,N. It does not formalize the full noncommutative bimodule theorem, density, Morita equivalence, or Proposition 3.56. No disputed conclusion is added as a hypothesis.",
+    "passages": [
+      "lem:schur",
+      "th:hom-tensor-adjointness"
+    ],
+    "required_olean": [
+      "Mathlib/RingTheory/SimpleModule/Basic.olean",
+      "Mathlib/LinearAlgebra/TensorProduct/Basic.olean"
+    ]
+  }
+]

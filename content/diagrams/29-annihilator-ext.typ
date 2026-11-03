@@ -1,0 +1,60 @@
+#import "@preview/fletcher:0.5.8": diagram, edge, node
+
+#let conductor-extension-diagram() = block(width: 100%, align(center, diagram(
+  spacing: (20mm, 15mm),
+  node-inset: 2pt,
+  node-defocus: 0,
+  node((0, 0), $X$),
+  node((1, 0), $X_1$),
+  node((2, 0), $Y'$),
+  node((0.5, 1), $N$),
+  node((0.5, 0), $subset.eq$),
+  edge((1, 0), (2, 0), $i$, "-|>", bend: 10deg, label-side: left),
+  edge((2, 0), (1, 0), $j$, "-|>", bend: 10deg, label-side: left),
+  edge((0, 0), (0.5, 1), $c f$, "-|>", label-side: right),
+  edge((1, 0), (0.5, 1), $f_1$, "-|>", label-side: left),
+)))
+
+#let pullback-endomorphism-diagram(free: false) = block(width: 100%, align(
+  center,
+  diagram(
+    spacing: (19mm, 13mm),
+    node-inset: 2pt,
+    node-defocus: 0,
+    node((0, 0), $xi:0$),
+    node((1, 0), if free { $M'$ } else { $N$ }),
+    node((2, 0), if free { $F$ } else { $X$ }),
+    node((3, 0), $M$),
+    node((4, 0), $0$),
+    node((0, 1), $xi phi:0$),
+    node((1, 1), if free { $M'$ } else { $N$ }),
+    node((2, 1), if free { $F_1$ } else { $X_1$ }),
+    node((3, 1), $M$),
+    node((4, 1), $0$),
+    edge((0, 0), (1, 0), "-|>"),
+    edge((1, 0), (2, 0), "-|>"),
+    edge((2, 0), (3, 0), $mu$, "-|>", label-side: left),
+    edge((3, 0), (4, 0), "-|>"),
+    edge((0, 1), (1, 1), "-|>"),
+    edge((1, 1), (2, 1), "-|>"),
+    edge((2, 1), (3, 1), $mu_1$, "-|>", label-side: left),
+    edge((3, 1), (4, 1), "-|>"),
+    edge((1, 1), (1, 0), $1$, "-|>", label-side: left),
+    edge((2, 1), (2, 0), $phi_1$, "-|>", label-side: left),
+    edge((3, 1), (3, 0), $phi$, "-|>", label-side: left),
+  ),
+))
+
+#let projective-trace-diagram() = block(width: 100%, align(center, diagram(
+  spacing: (57mm, 17mm),
+  node-inset: 2pt,
+  node-defocus: 0,
+  node((0, 0), $op("Hom")_R (M,R) times.o_R M$),
+  node((1, 0), $op("End")_R (M)$),
+  node((0, 1), $op("Hom")_Lambda (M, Lambda) times.o_Lambda M$),
+  node((1, 1), $op("End")_Lambda (M)$),
+  edge((0, 0), (1, 0), $tau_0$, "-|>", label-side: left),
+  edge((0, 1), (1, 1), $tau$, "-|>", label-side: left),
+  edge((0, 0), (0, 1), $theta times.o 1$, "-|>", label-side: right),
+  edge((1, 0), (1, 1), $sigma$, "-|>", label-side: right),
+)))
