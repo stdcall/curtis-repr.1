@@ -39,22 +39,6 @@
       "archive": true
     }
   },
-  "macos_tools": {
-    "typst": {
-      "url": "https://github.com/typst/typst/releases/download/v0.15.1/typst-x86_64-apple-darwin.tar.xz",
-      "sha256": "7f9fdd9584866245de9a79e0add8f9236fae6f40a8a45e2c4771ccc14db4e0fa",
-      "archive": true
-    },
-    "typstyle": {
-      "url": "https://github.com/typstyle-rs/typstyle/releases/download/v0.15.1/typstyle-x86_64-apple-darwin",
-      "sha256": "d24debaf653664c64622871df68239d92841261c5c894034120f4a6a74c943ab"
-    },
-    "tinymist": {
-      "url": "https://github.com/Myriad-Dreamin/tinymist/releases/download/v0.15.12-rc1/tinymist-x86_64-apple-darwin.tar.gz",
-      "sha256": "ca4061d52814e4a178f291237a9607c6043b4ef79370368d1cf8a4bd335a822f",
-      "archive": true
-    }
-  },
   "prose": {
     "checker": "harper",
     "header_band": 52.0
