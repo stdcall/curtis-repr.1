@@ -8,7 +8,7 @@ permissions:
   contents: read
 jobs:
   check:
-    runs-on: ubuntu-24.04
+    runs-on: macos-15-intel
     timeout-minutes: 45
     env:
       RAYON_NUM_THREADS: '1'
@@ -29,7 +29,7 @@ jobs:
           config = json.loads(pathlib.Path('config/project.json').read_text())
           target = pathlib.Path(os.environ['RUNNER_TEMP'])/'typst-tools'
           target.mkdir()
-          for name, spec in config['linux_tools'].items():
+          for name, spec in config['macos_tools'].items():
               archive = target/spec['url'].split('/')[-1]
               urllib.request.urlretrieve(spec['url'], archive)
               assert hashlib.sha256(archive.read_bytes()).hexdigest() == spec['sha256'], name
@@ -48,33 +48,22 @@ jobs:
       - name: Check and build
         run: |
           set -euo pipefail
-          check_swap="$RUNNER_TEMP/curtis-repr-1.swap"
-          sudo fallocate -l 8G "$check_swap"
-          sudo chmod 600 "$check_swap"
-          sudo mkswap "$check_swap"
-          sudo swapon "$check_swap"
           (
             while true; do
               date -u
-              free -h
-              ps -eo pid,ppid,rss,comm --sort=-rss | sed -n '1,8p'
-              for metric in memory.current memory.peak memory.events; do
-                if [[ -r "/sys/fs/cgroup/$metric" ]]; then
-                  printf '%s: ' "$metric"
-                  cat "/sys/fs/cgroup/$metric"
-                fi
-              done
+              sysctl hw.memsize vm.swapusage
+              vm_stat
+              ps -axo pid,ppid,rss,comm | sort -k3,3nr | sed -n '1,8p'
               sleep 30
             done
           ) &
           check_monitor=$!
-          trap 'kill "$check_monitor" 2>/dev/null || true; sudo swapoff "$check_swap"; sudo rm -f "$check_swap"' EXIT
-          free -h
-          /usr/bin/time -v uv run --locked python scripts/project.py check
+          trap 'kill "$check_monitor" 2>/dev/null || true; wait "$check_monitor" 2>/dev/null || true' EXIT
+          /usr/bin/time -l uv run --locked python scripts/project.py check
       - name: Checksums of the published PDFs
         working-directory: build
         run: |
-          sha256sum curtis-repr.1.pdf curtis-repr.1.corrections.pdf \
+          shasum -a 256 curtis-repr.1.pdf curtis-repr.1.corrections.pdf \
             > SHA256SUMS
           cat SHA256SUMS
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
