@@ -14,7 +14,7 @@
   "tool_versions": {
     "typst": "0.15.1",
     "typstyle": "0.15.1",
-    "tinymist": "0.15.10"
+    "tinymist": "0.15.12-rc1"
   },
   "corrections_output": "build/curtis-repr.1.corrections.pdf",
   "corrections_entry": "content/corrections.typ",
@@ -34,8 +34,8 @@
       "sha256": "213c11bc2c64f7237c382b4bb1d06991530ed9d44d3a05204ca3c19615d55b99"
     },
     "tinymist": {
-      "url": "https://github.com/Myriad-Dreamin/tinymist/releases/download/v0.15.10/tinymist-x86_64-unknown-linux-gnu.tar.gz",
-      "sha256": "10df33ec0b6cb380b1354b55bd8a32fdc2f00fec281b7dc0a41086bd0038e0fc",
+      "url": "https://github.com/Myriad-Dreamin/tinymist/releases/download/v0.15.12-rc1/tinymist-x86_64-unknown-linux-gnu.tar.gz",
+      "sha256": "fe339547d5f0354ef68f09e8db8a93974a42deac23270ea0f9e83409c1969fd3",
       "archive": true
     }
   },
