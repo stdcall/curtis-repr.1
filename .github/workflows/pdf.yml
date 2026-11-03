@@ -10,6 +10,9 @@ jobs:
   check:
     runs-on: ubuntu-24.04
     timeout-minutes: 45
+    env:
+      RAYON_NUM_THREADS: '1'
+      PYTHONUNBUFFERED: '1'
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -50,7 +53,22 @@ jobs:
           sudo chmod 600 "$check_swap"
           sudo mkswap "$check_swap"
           sudo swapon "$check_swap"
-          trap 'sudo swapoff "$check_swap"; sudo rm -f "$check_swap"' EXIT
+          (
+            while true; do
+              date -u
+              free -h
+              ps -eo pid,ppid,rss,comm --sort=-rss | sed -n '1,8p'
+              for metric in memory.current memory.peak memory.events; do
+                if [[ -r "/sys/fs/cgroup/$metric" ]]; then
+                  printf '%s: ' "$metric"
+                  cat "/sys/fs/cgroup/$metric"
+                fi
+              done
+              sleep 30
+            done
+          ) &
+          check_monitor=$!
+          trap 'kill "$check_monitor" 2>/dev/null || true; sudo swapoff "$check_swap"; sudo rm -f "$check_swap"' EXIT
           free -h
           /usr/bin/time -v uv run --locked python scripts/project.py check
       - name: Checksums of the published PDFs
