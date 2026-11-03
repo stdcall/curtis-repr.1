@@ -23,6 +23,7 @@ import subprocess
 import sys
 import tempfile
 import threading
+import time
 from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,6 +38,26 @@ LEGACY = re.compile(
     r'part-ref|theorem-ref|lemma-ref|proposition-ref|corollary-ref|'
     r'figure-ref|sec-ref|ch-ref|sec-ch-ref|fig-ref|idx-ref|number-ref)'
     r'\s*\(\s*(?:<|")')
+LSP_SESSION_TIMEOUT = 900
+
+
+def session_remaining(deadline):
+    remaining = deadline - time.monotonic()
+    if remaining <= 0:
+        raise TimeoutError('Tinymist LSP session exceeded '
+                           f'{LSP_SESSION_TIMEOUT} seconds')
+    return remaining
+
+
+def receive_message(inbox, process, deadline):
+    """Share one session budget; detect server exit during a silent wait."""
+    while True:
+        try:
+            return inbox.get(timeout=min(1, session_remaining(deadline)))
+        except queue.Empty:
+            code = process.poll()
+            if code is not None:
+                raise RuntimeError(f'Tinymist LSP exited with status {code}')
 
 
 def position(text, offset):
@@ -97,6 +118,7 @@ def check(root=ROOT):
                         '--font-path', 'assets/fonts', 'content/main.typ',
                         str(Path(tmp) / 'book.pdf')], cwd=root, check=True,
                        stdout=subprocess.DEVNULL, stderr=log)
+        deadline = time.monotonic() + LSP_SESSION_TIMEOUT
         process = subprocess.Popen(['tinymist', 'lsp'], cwd=root.parent,
                                    stdin=subprocess.PIPE,
                                    stdout=subprocess.PIPE, stderr=log)
@@ -121,6 +143,7 @@ def check(root=ROOT):
 
         def send(method, params, request=True):
             nonlocal serial
+            session_remaining(deadline)
             serial += 1
             message = {'jsonrpc': '2.0', 'method': method, 'params': params}
             if request:
@@ -131,7 +154,7 @@ def check(root=ROOT):
             process.stdin.flush()
             if request:
                 while True:
-                    reply = inbox.get(timeout=90)
+                    reply = receive_message(inbox, process, deadline)
                     if reply.get('id') == serial:
                         assert 'error' not in reply, reply
                         return reply.get('result')
@@ -163,7 +186,9 @@ def check(root=ROOT):
             send('workspace/executeCommand', {
                 'command': 'tinymist.focusMain', 'arguments': [str(first)]})
             while True:
-                event = events.pop(0) if events else inbox.get(timeout=90)
+                session_remaining(deadline)
+                event = (events.pop(0) if events
+                         else receive_message(inbox, process, deadline))
                 if event.get('method') == 'tinymist/compileStatus':
                     status = event['params']['status']
                     assert status != 'compileError', event
@@ -238,7 +263,7 @@ def check(root=ROOT):
                 assert any(i['label'] == label for i in items or []), prefix
             send('shutdown', None)
             send('exit', None, request=False)
-            process.wait(timeout=10)
+            process.wait(timeout=min(10, session_remaining(deadline)))
             print(f'Tinymist: {len(cases)} exact label destinations '
                   f'({cross_file} cross-file); main file and completion OK')
             return {'labels': len(cases), 'cross_file': cross_file}
