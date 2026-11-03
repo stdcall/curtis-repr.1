@@ -2,6 +2,10 @@
 set dotenv-load
 
 python := env("PYTHON", "python3")
+tool_path := env("BOOK_TOOL_PATH", "")
+export PATH := if tool_path == "" { env("PATH") } else {
+    tool_path + ":" + env("PATH")
+}
 
 default: build
 

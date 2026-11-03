@@ -64,3 +64,12 @@ text restarts at Arabic 1. Hidden folios continue the page count.
 
 Only the book with editorial notes and its separate corrections PDF are
 produced. Fonts are supplied with their licenses in `assets/fonts`.
+
+The native tool versions are pinned in `config/project.json`. Tinymist
+0.15.12-rc1 includes the [dynamic-import analysis memory fix][import-fix].
+Use the official release archive for the platform and verify its checksum.
+A separate executable directory can be selected with `BOOK_TOOL_PATH` in
+the local `.env`; `just` prepends it to the command search path.
+Run `just check` for the complete PDF and native-navigation checks.
+
+[import-fix]: https://github.com/Myriad-Dreamin/tinymist/pull/2761
