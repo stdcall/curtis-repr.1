@@ -987,8 +987,9 @@ and the Jacobson radical of the ring. We have:
     intersections indexed by pairs of maximal submodules of $M$ and $N$. Such a
     family can be empty, even when the other module has maximal submodules. The
     hint above avoids this problem. For the convention that $rad M=M$ when $M$
-    has no maximal submodules see Lam~@bib:Lam1999, p.~99; the direct-sum
-    argument here follows independently from @prop:module-radical-functoriality.
+    has no maximal submodules see Lam~@bib:Lam1999, §3, the definition preceding
+    Theorem~3.75; the direct-sum argument here follows independently from
+    @prop:module-radical-functoriality.
   ]
 ] <exc:radical-direct-sum>
 

@@ -81,7 +81,8 @@
       "@bib:Reiner1975[MO (6.16)]": "A precise locator in the external cited work, with its native bibliography link.",
       "Ayoub–Ayoub~@bib:Ayoub1969, Theorem~5 and its corollary": "Theorem 5 and its corollary are in the cited Ayoub–Ayoub article, not this volume.",
       "Reiner~@bib:Reiner2003, Theorem~6.16": "Theorem 6.16 in the cited 2003 edition of Maximal Orders.",
-      "Reiner~@bib:Reiner2003, Exercise~5.1": "Exercise 5.1 in the cited 2003 edition of Maximal Orders."
+      "Reiner~@bib:Reiner2003, Exercise~5.1": "Exercise 5.1 in the cited 2003 edition of Maximal Orders.",
+      "Lam~@bib:Lam1999, §3, the definition preceding Theorem~3.75": "The section and theorem locate the unnumbered definition in Lam's cited book."
     },
     "content/00-06-idempotents.typ": {
       "@bib:Reiner1975[MO §~6]": "A precise locator in the external cited work, with its native bibliography link.",

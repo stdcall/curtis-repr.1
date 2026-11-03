@@ -208,7 +208,7 @@
       "original": "the integral closure of $R_P$ in $K$",
       "corrected": "the integral closure of $R_P$ in $L$",
       "reason": "The extension field containing S is L; localization does not replace it by K.",
-      "verified_by": "The definition of S in the preceding sentence; Reiner, Maximal Orders (2003), p. 61."
+      "verified_by": "The definition of S in the preceding sentence; Reiner, Maximal Orders (2003), proof of Theorem4.35(i)."
     },
     {
       "id": "C032",
@@ -228,7 +228,7 @@
       "original": "$r N subset.eq M subset.eq s N$; $r M subset.eq N subset.eq s M$",
       "corrected": "$r N subset.eq M subset.eq s^(-1) N$; $r M subset.eq N subset.eq s^(-1) M$",
       "reason": "Separate scalar inclusions give reciprocal upper bounds. For example $M=(1/2)ZZ$ and $N=ZZ$ cannot satisfy $M subset.eq s N$ for any nonzero integer s.",
-      "verified_by": "Clearing denominators for two finite lattice bases; Reiner, Maximal Orders (2003), pp. 45 and 48, for the one-sided inclusion."
+      "verified_by": "Clearing denominators for two finite lattice bases; Reiner, Maximal Orders (2003), section4, the discussion of full lattices immediately before Theorem4.0, for the one-sided inclusion."
     },
     {
       "id": "C034",
@@ -418,7 +418,7 @@
       "original": "The printed subgroup averages and their listed differences are asserted to be the primitive idempotents of $K G$ for arbitrary $K$.",
       "corrected": "Replace the hint by a trace, valuation and Eisenstein argument, followed by the subgroup-support calculation.",
       "reason": "The listed expressions are not the correct rational primitive blocks, and rational blocks may split further over $K$. The replacement handles ramified and unramified $R$, proves indecomposability for $n>1$, and identifies the exception $n=1$, $pi R=p R$. The statement is retained.",
-      "verified_by": "Two independent general arguments using the rank and regular trace of an idempotent. Reiner, Maximal Orders (2003), Exercise5.1, for Eisenstein; Ayoub and Ayoub (1969), Theorem5 and corollary, for rational subgroup averages only."
+      "verified_by": "The corrected Hint's regular-trace and valuation argument, Eisenstein irreducibility and the subgroup-support calculation. Reiner, Maximal Orders (2003), Exercise5.1, supports Eisenstein; Ayoub and Ayoub (1969), Theorem5 and corollary, support rational subgroup averages only."
     },
     {
       "id": "C054",
@@ -438,7 +438,7 @@
       "original": "Joint intersections indexed by pairs of maximal submodules, with an intersection in place of the final direct sum.",
       "corrected": "Apply Proposition 5.1(i) to the two inclusions and the two projections.",
       "reason": "One module may have no maximal submodules. For $A=ZZ$, $M=QQ$, $N=ZZ/2ZZ$, the joint indexing family is empty although $rad(M plus.o N)=QQ plus.o 0$. The replacement works for arbitrary modules and preserves the historical attribution of the printed proof to Janusz in an editorial note.",
-      "verified_by": "Functoriality in Proposition5.1(i); Lam, Lectures on Modules and Rings (1999), p.99, for the radical definition and the empty-family convention, not for the independent direct-sum deduction."
+      "verified_by": "Functoriality in Proposition5.1(i); Lam, Lectures on Modules and Rings (1999), section3, the definition of the module radical immediately before Theorem3.75, for the empty-family convention, not for the independent direct-sum deduction."
     },
     {
       "id": "C055",
@@ -3548,7 +3548,7 @@
       "original": "Finite representation type holds if and only if one of the three listed cases holds at every relevant prime.",
       "corrected": "The three listed cases are sufficient for finite representation type; replace “if and only if” by “if”.",
       "reason": "For $R=ZZ[sqrt(2)]$ and $G=C_2$, the unique prime above 2 has ramification index 2 and meets none of the three cases. Its completed congruence order has four indecomposable lattice types, while all odd-prime completions are maximal; (33.1) gives finite global type. An inline note records this counterexample.",
-      "verified_by": "The integral closure of Z in Q(√2), the local congruence-order classification and (33.1)."
+      "verified_by": "The integral closure of Z in Q(√2), the local congruence-order classification, the Drozd–Roiter criterion in Theorem33.24 and the local-to-global criterion (33.1)."
     },
     {
       "id": "C369",
